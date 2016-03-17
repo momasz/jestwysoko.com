@@ -1,0 +1,17 @@
+%container {
+  max-width: 100%;
+  margin: 0;
+
+  @include respond-to(tablet) {
+    max-width: $grid-width-web-small;
+    margin: 0 auto;
+  }
+
+  @include respond-to(web) {
+    max-width: $grid-width-web;
+  }
+
+  @include respond-to(big) {
+    max-width: $grid-width-big;
+  }
+}
