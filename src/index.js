@@ -1,25 +1,46 @@
-import 'angular-material/angular-material.scss'
 import './styles/main.scss'
 
 // Vendor
 import angular from 'angular';
 import ngRoute from 'angular-route';
+import uiRouter from 'angular-ui-router';
 import material from 'angular-material';
+import googleMap from 'ngmap';
+import timer from 'angular-timer';
 
 // Non-vendor
 import main from './main';
+import content from './content/view/content.html';
+import info from './content/view/info.html';
+import my from './content/view/my.html';
+import mapa from './content/view/mapa.html';
+import kontakt from './content/view/kontakt.html';
 
-import contentTemplateUrl from './content/view/content.html';
-
-function appConfig($routeProvider, $locationProvider) {
-  $routeProvider
-    .when('/', {
-      templateUrl: contentTemplateUrl,
-      controller: 'ContentController',
-      controllerAs: 'content'
+function appConfig($stateProvider, $urlRouterProvider) {
+  $stateProvider
+    .state('home', {
+      url: '/',
+      templateUrl: content
+    })
+    .state('info', {
+      url: '/info',
+      templateUrl: info
+    })
+    .state('my', {
+      url: '/my',
+      templateUrl: my
+    })
+    .state('mapa', {
+      url: '/mapa',
+      templateUrl: mapa
+    })
+    .state('kontakt', {
+      url: '/kontakt',
+      templateUrl: kontakt
     });
 
-  $locationProvider.html5Mode(true);
+  $urlRouterProvider
+    .otherwise('home');
 }
 
 /**
@@ -27,18 +48,21 @@ function appConfig($routeProvider, $locationProvider) {
  * the application classes have been loaded.
  */
 angular
-  .element( document )
-  .ready( () => {
+  .element(document)
+  .ready(() => {
     let appName = 'starter-app';
     let body = document.getElementsByTagName("body")[0];
-    let app  = angular
+    let app = angular
       .module(appName, [
         material,
         ngRoute,
-        main
+        uiRouter,
+        main,
+        'ngMap',
+        'timer'
       ])
-      .config(['$routeProvider', '$locationProvider', appConfig]);
+      .config(['$stateProvider', '$urlRouterProvider', appConfig]);
 
-    angular.bootstrap(body, [app.name], { strictDi: false });
+    angular.bootstrap(body, [app.name], {strictDi: false});
   });
 

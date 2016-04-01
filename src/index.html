@@ -10,6 +10,9 @@
   <title>Renata + Tomek</title>
   <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
   <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css">
+  <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.js"></script>
   <style type="text/css">
     [ng-cloak] {
       display: none;
@@ -19,9 +22,48 @@
 
 <body ng-cloak layout="column">
 
-<ng-view class="container"></ng-view>
+<div class="container navbar-wrapper">
+  <div class="navbar">
+    <a class="bird" ui-sref="home" ng-click="menuOpened = false">
+      <img src="/static/images/bird.svg" alt=""/>
+    </a>
+
+  <span class="toggle-button" ng-click="menuOpened = !menuOpened">
+    <span class="divider"></span>
+    <span class="divider"></span>
+    <span class="divider"></span>
+  </span>
+
+    <ul class="main-menu" ng-class="{ open: menuOpened}">
+      <li ui-sref-active="active"><a ng-click="menuOpened = false" ui-sref="info">Info</a></li>
+      <li ui-sref-active="active"><a ng-click="menuOpened = false" ui-sref="mapa">Mapa</a></li>
+      <li ui-sref-active="active"><a ng-click="menuOpened = false" ui-sref="kontakt">Kontakt</a></li>
+      <li ui-sref-active="active"><a ng-click="menuOpened = false" ui-sref="my">My</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="container content" ui-view></div>
+
+<br>
+
+<div class="arrow">
+  <img src="/static/images/arrow.svg" alt=""/>
+</div>
+
+<div class="footer">
+  <div class="container">
+    <span class="date-wrapper">Pobieramy się <span class="date"><strong>6 sierpnia
+      2016,</strong> o <strong>16<sup>00</sup></strong></span></span>
+    <span class="timer">
+      <timer end-time="1470492000000">czyli za {{days}} dni, {{hours}} godz., {{minutes}} min.</timer>
+    </span>
+    <br>
+  </div>
+</div>
 
 <script src="/assets/main.js" type="text/javascript"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0zfZ10rqbrim8Ha8WcGIIDvVmNrTpLh0"></script>
 
 </body>
 </html>

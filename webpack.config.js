@@ -58,7 +58,7 @@ module.exports = {
       loader: 'ngtemplate!html'
     },
     {
-      test: /\.(png|jpg|woff|woff2|eot|ttf|svg)$/,
+      test: /\.(png|jpg|woff|woff2|eot|ttf|otf|svg)$/,
       loader: 'url-loader?limit=8192'
     }]
   },
@@ -69,6 +69,10 @@ module.exports = {
     new ExtractTextPlugin("styles.css"),
     new webpack.DefinePlugin({
       __DEV__: true
+    }),
+    new webpack.ProvidePlugin({
+      humanizeDuration: "humanize-duration",
+      moment: "moment"
     })
   ]
 };

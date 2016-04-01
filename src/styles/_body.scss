@@ -1,23 +1,169 @@
 html, body {
-  font-family: 'Moon Flower', "Helvetica Neue", Arial, Verdana, sans-serif;
-  font-size: 24px;
+  font-family: 'Lato Light', "Helvetica Neue", Arial, Verdana, sans-serif;
+  font-size: 18px;
   height: 100%;
   margin: 0;
   padding: 0;
+
+  @include respond-to(tablet) {
+    font-size: 24px;
+  }
 }
 
 .container {
-  height: 100%;
   position: relative;
 }
 
 $root-size-web: 400px;
 
-.root {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: $root-size-web;
-  margin-left: -($root-size-web/2);
-  margin-top: -($root-size-web/2);
+.logo {
+  @include respond-to(tablet) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $root-size-web;
+    margin-left: -($root-size-web/2);
+    margin-top: -($root-size-web/2);
+  }
+}
+
+.image-wrapper {
+  img {
+    max-width: 100%;
+  }
+}
+
+.highlight {
+  color: $color-highlight;
+}
+
+.content {
+  position: relative;
+  padding: $body-gap/2;
+
+  @include respond-to(tablet) {
+    padding: $body-gap 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 45px;
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 35px;
+}
+h4 {
+  font-size: 30px;
+}
+h5 {
+  font-size: 25px;
+}
+h6 {
+  font-size: 20px;
+}
+
+@include respond-to(tablet) {
+  h1 {
+    font-size: 55px;
+  }
+  h2 {
+    font-size: 50px;
+  }
+  h3 {
+    font-size: 45px;
+  }
+  h4 {
+    font-size: 40px;
+  }
+  h5 {
+    font-size: 35px;
+  }
+  h6 {
+    font-size: 30px;
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Moon Flower Bold";
+  font-weight: normal;
+  margin: $body-gap/2 0;
+}
+
+.tel-numbers {
+  font-size: 30px;
+  font-family: "Moon Flower";
+
+  @include respond-to(tablet) {
+    font-size: 40px;
+  }
+
+  a {
+    text-decoration: none;
+    font-family: "Moon Flower Bold";
+  }
+}
+
+ul {
+  margin: $body-gap/2 0;
+  list-style: none;
+  padding-left: 20px;
+
+  @include respond-to(tablet) {
+    padding-left: 40px;
+  }
+}
+
+ul.custom-list {
+  li {
+    position: relative;
+    margin-bottom: 10px;
+    &::before {
+      position: absolute;
+      content: $heart;
+      left: -15px;
+      font-size: 20px;
+      line-height: 20px;
+      font-family: "Moon Flower";
+
+      @include respond-to(tablet) {
+        left: -30px;
+        font-size: 40px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+.image-wrapper {
+  text-align: center;
+}
+
+a {
+  color: $color-red;
+  text-decoration: none;
+  border-bottom: solid 1px transparent;
+  outline: none;
+  &:hover {
+    border-color: $color-red;
+  }
+}
+
+.arrow {
+  width: 200px;
+  margin: 0 auto;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.owl-item {
+  padding: 0 5px;
 }

@@ -48,7 +48,7 @@ module.exports = {
       test: /\.(scss|css)/,
       loader: ExtractTextPlugin.extract('css!sass')
     }, {
-      test: /\.(png|jpg|woff|woff2|eot|ttf|svg)$/,
+      test: /\.(png|jpg|woff|woff2|eot|ttf|otf|svg)$/,
       loader: 'url-loader?limit=8192'
     }]
   },
@@ -65,6 +65,10 @@ module.exports = {
         // Useful to reduce the size of client-side libraries, e.g. react
         NODE_ENV: JSON.stringify('production')
       }
+    }),
+    new webpack.ProvidePlugin({
+      humanizeDuration: "humanize-duration",
+      moment: "moment"
     })
   ]
 };
