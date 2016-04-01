@@ -141,6 +141,12 @@ ul.custom-list {
   }
 }
 
+.main {
+  @include respond-to(tablet) {
+    min-height: 400px;
+  }
+}
+
 .image-wrapper {
   text-align: center;
 }

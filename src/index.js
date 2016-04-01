@@ -40,7 +40,7 @@ function appConfig($stateProvider, $urlRouterProvider) {
     });
 
   $urlRouterProvider
-    .otherwise('home');
+    .otherwise('/');
 }
 
 /**

@@ -24,7 +24,9 @@ $navbar-item-height: 52px;
   }
 
   .bird {
-    float: left;
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 50px;
     display: block;
     margin-top: $body-gap/2;
