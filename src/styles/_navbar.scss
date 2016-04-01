@@ -25,7 +25,7 @@ $navbar-item-height: 52px;
 
   .bird {
     position: absolute;
-    left: 0;
+    left: 10px;
     top: 0;
     width: 50px;
     display: block;
@@ -38,6 +38,7 @@ $navbar-item-height: 52px;
     @include respond-to(tablet) {
       width: 100px;
       margin-top: 0;
+      left: 0;
     }
 
     img {
