@@ -20,9 +20,9 @@ function appConfig($stateProvider, $urlRouterProvider) {
       templateUrl: videos,
       controller: 'ContentController',
       resolve: {
-        movie: function($stateParams) {
+        movie: ['$stateParams', ($stateParams) => {
           return $stateParams.movie;
-        }
+        }]
       }
     });
 

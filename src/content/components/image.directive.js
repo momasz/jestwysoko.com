@@ -1,6 +1,6 @@
 'use strict';
 
-const customImage = () => {
+function customImage () {
   return {
     restrict: 'EA',
     template: '<img ng-src="{{source}}" alt="{{title}}" />',
@@ -8,13 +8,13 @@ const customImage = () => {
       source: '=',
       title: '='
     },
-    link: function ($scope, $el) {
+    link: ($scope, $el) => {
       $el.children('img').load(function () {
         $el.parent().addClass('loaded');
         $el.addClass('loaded');
       });
     }
   };
-};
+}
 
 export default [customImage];
