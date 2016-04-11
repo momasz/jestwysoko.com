@@ -2,7 +2,7 @@
 
 require('dotenv').load({silent: true});
 const client = require('scp2');
-const DIR = '/home/momasz/renataitomek';
+const DIR = process.env.DIR;
 const credentials = {
   host: process.env.HOST,
   port: process.env.PORT,

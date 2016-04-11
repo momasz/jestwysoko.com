@@ -4,41 +4,29 @@ $navbar-items: 4;
 $navbar-item-height: 52px;
 
 .navbar-wrapper {
-  font-family: "Moon Flower";
-  font-size: 30px;
+  padding: $body-gap/2;
 
   @include respond-to(tablet) {
     padding: 0;
-    font-size: 40px;
   }
 }
 
 .navbar {
-  border-bottom: dashed 1px $color-lightGray;
+  @include clearfix();
+  padding-bottom: $grid-gutter-width;
+  border-bottom: 1px solid $color-lightenGray;
 
   @include respond-to(tablet) {
-    text-align: center;
     margin-top: $body-gap;
     margin-bottom: 0;
-    padding: 0;
   }
 
-  .bird {
-    position: absolute;
-    left: 10px;
-    top: 0;
-    width: 50px;
-    display: block;
-    margin-top: $body-gap/2;
-
-    &:hover {
-      border-color: transparent;
-    }
+  .logo {
+    float: right;
+    width: 70px;
 
     @include respond-to(tablet) {
       width: 100px;
-      margin-top: 0;
-      left: 0;
     }
 
     img {
@@ -46,9 +34,16 @@ $navbar-item-height: 52px;
     }
   }
 
+  .title {
+    margin: 0;
+
+    @include respond-to(tablet) {
+      @include text-overflow(45px, 105px, 1);
+    }
+  }
+
   .main-menu {
     text-transform: uppercase;
-    font-size: 12px;
     list-style: none;
     padding: 0;
     height: 0;
@@ -75,7 +70,6 @@ $navbar-item-height: 52px;
       @include clearfix();
       height: auto;
       margin: 0;
-      font-size: 12px;
       width: auto;
       border-top: 0;
       display: inline-block;
@@ -91,7 +85,6 @@ $navbar-item-height: 52px;
       }
 
       a {
-        font-size: $menu-element-height-mobile;
         color: inherit;
         text-decoration: none;
         display: block;
@@ -103,7 +96,6 @@ $navbar-item-height: 52px;
 
         @include respond-to(tablet) {
           display: inline;
-          font-size: $menu-element-height;
         }
       }
       a:hover,
@@ -111,16 +103,13 @@ $navbar-item-height: 52px;
         color: $color-red;
       }
       &.active a {
-        font-family: "Moon Flower Bold";
       }
       &::after {
         vertical-align: top;
-        line-height: $menu-element-height;
-        content: $heart;
+        content: $navbar-prefix;
         position: absolute;
         left: 0;
         top: 0;
-        font-size: 24px;
         color: $color-highlight;
 
         @include respond-to(tablet) {

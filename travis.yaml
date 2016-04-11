@@ -1,0 +1,9 @@
+env:
+  global:
+    - secure: "N3IRONstGJoWO93WEyWlj5OXPWNIFtL04XZVxTT8f+WOC7LsmD85RPP6YPX6T4YwbXWS9EpxCT+9eGkqpVscaHrKb62x+Db/xvCq32hXMXVhmdmjAx4A9ABk38RSpumdruxokmyMKhpTjXFYEecaImaP5ZswsMf+4+Z6dPm98MQ="
+    - secure: "jR8ewvOPr7BpqtE6kXzXMsrzdYbH6tSgjQutPJKGiHXDfgDk5dMOD6e9urzRD3/GaaiCocZdFBlhAjA6Fjm8iCwTUhJTR2SlDtaMlL1895ZM/Ik4qhzbgkdy3q8gdTyMUp2h8qee2eR5LxKSLqsXKGUQSC4MgsW2hpU5QMaqoyw="
+    - secure: "U9H+VZJuAdon8XmMVyT7BiK47MOs477dJjc9IEVDmD/Ecye0BX1dFsV4h20rg63J/MqdS4PSP459JsYxlmCGdyIbHtbBb4PI+m4PmhJ9j8eUFVWGQUeHuXRZ+sVI2/Z5wuluWCr3/cdWsTUAkUB7q97WXYmoUjrxmK5rH7OIFNw="
+    - secure: "BQ9oakXucYFBAoX5oHGSrYphJ3jiPtgjZtpowSMhqUHJ17l8CZhUoMRybMJmp/DetPDEfPXjLgKQpI2wooHl0pUVW0Bx0cR/yaEqzne+T1m8BZwkqGFD6qonGR8qc1tPLmSlJHQwVHKmUKvAoRdHKLojxJcv5qmNNXbBcCGwGnA="
+    - secure: "yuIqq4BvEQyQ8i6zgIesCiCEZ/6GsyqXXi8quugavJsPIudDb2+hiGnuxMul/KZKHsYXMc7lSm7EGBdHwDm4x804iIVk9zmm3CK4TlHqOiPAYbKgTM41qnWh3gE5NtpKcQfmoydaK93eFAZ/i2yBxG/zqZc92SQ8vVvuNrGTOog="
+after_success:
+    "npm run deploy"

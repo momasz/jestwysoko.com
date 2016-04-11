@@ -1,23 +1,13 @@
 import ContentController from './ContentController';
-import ContentService from './ContentService';
+import CustomImage from './components/image.directive';
+import CustomVideo from './components/video.directive';
 
 let moduleName = angular
   .module("content", [])
-  .service("ContentService", ContentService)
+  .directive("customImage", CustomImage)
+  .directive("customVideo", CustomVideo)
   .controller("ContentController", ContentController)
-  .directive("owlCarousel", function () {
-    return {
-      restrict: 'A',
-      link: function (scope, element, attrs) {
-        $(element).owlCarousel({
-          items: 1,
-          loop: true,
-          nav: false,
-          dots: false
-        });
-      }
-    };
-  })
+  .filter("idMaker", () => (value) => parseInt(value.replace('/videos/', '')))
   .name;
 
 export default moduleName;

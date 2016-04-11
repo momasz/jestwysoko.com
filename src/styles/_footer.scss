@@ -1,12 +1,7 @@
 .footer {
   text-align: center;
-  margin: $body-gap 0;
-  font-family: "Moon Flower";
-  font-size: 30px;
-
-  @include respond-to(tablet) {
-    font-size: 40px;
-  }
+  margin: $grid-gutter-width 0;
+  border-top: 1px solid $color-lightenGray;
 }
 
 .date-wrapper,
@@ -21,15 +16,4 @@
       display: inline-block;
     }
   }
-  strong {
-    font-size: 35px;
-
-    @include respond-to(tablet) {
-      font-size: 45px;
-    }
-  }
-}
-
-.timer {
-  font-size: 32px;
 }
