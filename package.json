@@ -6,7 +6,7 @@
     "start": "node server.js",
     "build": "scripts/build.sh",
     "postinstall": "npm run build",
-    "deploy": "npm run build && node deploy.js"
+    "deploy": "node deploy.js"
   },
   "engines": {
     "node": "4.2"
