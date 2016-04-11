@@ -1,4 +1,7 @@
 jestwysoko.com website
+
+![alt tag](http://jestwysoko.com/images/pawelek_logo.png)
+
 ============
 
 ## Quickstart
