@@ -4,7 +4,9 @@ $navbar-items: 4;
 $navbar-item-height: 52px;
 
 .navbar-wrapper {
+  border-bottom: 1px solid $color-lightenGray;
   padding: $body-gap/2;
+  margin-bottom: $grid-gutter-width;
 
   @include respond-to(tablet) {
     padding: 0;
@@ -13,8 +15,6 @@ $navbar-item-height: 52px;
 
 .navbar {
   @include clearfix();
-  padding-bottom: $grid-gutter-width;
-  border-bottom: 1px solid $color-lightenGray;
 
   @include respond-to(tablet) {
     margin-top: $body-gap;

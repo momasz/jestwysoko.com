@@ -19,9 +19,6 @@
   }
 
   .video-container {
-    margin-left: -$grid-gutter-width/2;
-    margin-right: -$grid-gutter-width/2;
-
     @include respond-to(tablet) {
       margin: 0;
     }
@@ -76,9 +73,6 @@
   overflow: hidden;
   list-style: none;
   margin-top: 0;
-  margin-left: -$grid-gutter-width/2;
-  margin-right: -$grid-gutter-width/2;
-  margin-bottom: -$grid-gutter-width;
   padding: 0;
 
   .movie {
