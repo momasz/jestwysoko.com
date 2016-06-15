@@ -1,4 +1,4 @@
-![alt tag](http://jestwysoko.com/images/pawelek_logo.png)
+![alt tag](http://promocja.jestwysoko.com/jestwysoko_logo.jpg)
 
 [![Build Status](https://travis-ci.org/momasz/jestwysoko.com.svg?branch=master)](https://travis-ci.org/momasz/jestwysoko.com)
 
