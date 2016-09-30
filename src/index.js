@@ -13,7 +13,7 @@ import videos from './content/view/videos.html';
 // data
 import videosData from './data/videos.json';
 
-function appConfig($stateProvider, $urlRouterProvider) {
+function appConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider
     .state('filmy', {
       url: '/filmy/:movie',
@@ -25,6 +25,8 @@ function appConfig($stateProvider, $urlRouterProvider) {
         }]
       }
     });
+
+  $locationProvider.html5Mode(true).hashPrefix('!')
 
   $urlRouterProvider
     .otherwise('filmy/');
@@ -46,7 +48,7 @@ angular
         ngSanitize,
         main
       ])
-      .config(['$stateProvider', '$urlRouterProvider', appConfig])
+      .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', appConfig])
       .constant('VIDEOS', videosData);
 
     angular.bootstrap(body, [app.name], {strictDi: false});
