@@ -1,56 +1,8 @@
-import './styles/main.scss'
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App";
+import "./theme.scss";
 
-// Vendor
-import angular from 'angular';
-import uiRouter from 'angular-ui-router';
-import material from 'angular-material';
-import ngSanitize from 'angular-sanitize';
+let target = document.getElementById("app");
 
-// Non-vendor
-import main from './main';
-import videos from './content/view/videos.html';
-
-// data
-import videosData from './data/videos.json';
-
-function appConfig($stateProvider, $urlRouterProvider, $locationProvider) {
-  $stateProvider
-    .state('filmy', {
-      url: '/filmy/:movie',
-      templateUrl: videos,
-      controller: 'ContentController',
-      resolve: {
-        movie: ['$stateParams', ($stateParams) => {
-          return $stateParams.movie;
-        }]
-      }
-    });
-
-  $locationProvider.html5Mode(true).hashPrefix('!')
-
-  $urlRouterProvider
-    .otherwise('filmy/');
-}
-
-/**
- * Manually bootstrap the application when AngularJS and
- * the application classes have been loaded.
- */
-angular
-  .element(document)
-  .ready(() => {
-    let appName = 'starter-app';
-    let body = document.getElementsByTagName("body")[0];
-    let app = angular
-      .module(appName, [
-        material,
-        uiRouter,
-        ngSanitize,
-        main
-      ])
-      .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', appConfig])
-      .constant('VIDEOS', videosData);
-
-    angular.bootstrap(body, [app.name], {strictDi: false});
-  });
-
+ReactDOM.render(<App />, target);
