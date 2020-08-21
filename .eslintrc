@@ -7,6 +7,11 @@
     "plugin:react/recommended",
     "plugin:jest/recommended"
   ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "parserOptions": {
     "ecmaVersion": 7,
     "sourceType": "module",

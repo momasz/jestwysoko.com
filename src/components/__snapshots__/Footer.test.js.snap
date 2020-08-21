@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component renders as expected 1`] = `
+<Footer>
+  <p>
+    jestwysoko.com 
+    <strong>
+      ©
+    </strong>
+     2020
+  </p>
+</Footer>
+`;
