@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component renders as expected 1`] = `
+<Header>
+  <h1>
+    <a
+      href="/"
+    >
+      jestwysoko.com
+    </a>
+  </h1>
+</Header>
+`;
