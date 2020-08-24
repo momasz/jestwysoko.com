@@ -5,8 +5,9 @@
   "repository": "git@github.com:momasz/jestwysoko.com.git",
   "main": "src/index.js",
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html",
+    "start": "node .tools/localServer.js",
+    "start::static": "parcel src/index.html",
+    "build": "netlify-lambda build src/server",
     "test": "jest",
     "lint": "eslint --ext .jsx --ext .js src"
   },
@@ -22,10 +23,14 @@
     "eslint": "^7.7.0",
     "eslint-plugin-jest": "^23.20.0",
     "eslint-plugin-react": "^7.20.6",
+    "express": "^4.17.1",
     "intersection-observer": "^0.11.0",
     "jest": "^26.4.0",
+    "netlify-lambda": "^2.0.1",
     "node-sass": "^4.14.1",
-    "parcel-bundler": "^1.12.4"
+    "nodemon": "^2.0.4",
+    "parcel-bundler": "^1.12.4",
+    "serverless-http": "^2.5.0"
   },
   "dependencies": {
     "react": "^16.13.1",
