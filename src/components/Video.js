@@ -23,7 +23,9 @@ const Video = ({ width = 560, height = 315 }) => {
       <div className={"movie-container open"}>
         <div className={"video-container"}>
           <div className={"video-element"}>
-            <div className={loaded ? "loader loaded" : "loader"}></div>
+            <div className={loaded ? "loader loaded" : "loader"}>
+              <div></div>
+            </div>
             <div className={"video-wrapper"}>
               <div className={loaded ? "video loaded" : "video"}>
                 <iframe

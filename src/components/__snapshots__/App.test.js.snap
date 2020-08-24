@@ -55,8 +55,12 @@ exports[`App component renders as expected 1`] = `
                 href="/"
               >
                 <img
-                  alt=""
-                  src="/static/images/logo.png"
+                  alt="jestwysoko.com"
+                  src={
+                    Object {
+                      "process": [Function],
+                    }
+                  }
                 />
               </a>
             </div>
