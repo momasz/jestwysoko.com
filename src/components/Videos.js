@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import { shuffle } from "../utils";
 import videos from "../videos";
+import logo from './../static/images/logo.png';
 
 const randomised = shuffle(videos);
 
@@ -42,7 +43,7 @@ const Videos = ({ randomizeVideos = false }) => {
             />
           </div>
           <a className="logo" href="/">
-            <img src="/static/images/logo.png" alt=""/>
+            <img src={logo} alt="jestwysoko.com"/>
           </a>
         </div>
       </div>
