@@ -1,0 +1,170 @@
+$menu-element-height: 50px;
+$menu-element-height-mobile: $menu-element-height - 5;
+$navbar-items: 4;
+$navbar-item-height: 52px;
+
+.navbar-wrapper {
+  padding: $body-gap/2;
+  margin-bottom: $grid-gutter-width;
+
+  @include respond-to(tablet) {
+    padding: 0;
+  }
+}
+
+.video-filter {
+  display: inline-block;
+  border: 0;
+  font-size: 32px;
+  color: $color-search;
+  font-family: 'Lato Light', sans-serif;
+  padding: $grid-gutter-width/2;
+
+  @include respond-to(mobile) {
+    height: $navbar-item-height*2;
+    width: 75%;
+  }
+
+  &::placeholder {
+    color: silver;
+  }
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+
+.navbar {
+  @include clearfix();
+
+  @include respond-to(tablet) {
+    margin-top: $body-gap;
+    margin-bottom: 0;
+  }
+
+  .logo {
+    float: right;
+    width: 70px;
+
+    @include respond-to(tablet) {
+      width: 100px;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .title {
+    margin: 0;
+
+    @include respond-to(tablet) {
+      @include text-overflow(45px, 105px, 1);
+    }
+  }
+
+  .main-menu {
+    text-transform: uppercase;
+    list-style: none;
+    padding: 0;
+    height: 0;
+    margin: 0;
+    transition: height .2s, border .2s;
+    background: $color-white;
+    width: 100%;
+
+    @include respond-to(tablet-down) {
+      overflow: hidden;
+      z-index: 2;
+      position: relative;
+    }
+
+    &.open {
+      @include respond-to(tablet-down) {
+        height: $navbar-item-height * $navbar-items;
+        border-color: $color-highlight;
+        margin-bottom: 10px;
+      }
+    }
+
+    @include respond-to(tablet) {
+      @include clearfix();
+      height: auto;
+      margin: 0;
+      width: auto;
+      border-top: 0;
+      display: inline-block;
+    }
+
+    li {
+      padding: 0 0 0 20px;
+      position: relative;
+
+      @include respond-to(tablet) {
+        float: left;
+        padding: $menu-element-height/2 $menu-element-height/4 $menu-element-height/4;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+        border: none;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        @include respond-to(tablet) {
+          display: inline;
+        }
+      }
+      a:hover,
+      &.active a {
+        color: $color-red;
+      }
+      &.active a {
+      }
+      &::after {
+        vertical-align: top;
+        content: $navbar-prefix;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $color-highlight;
+
+        @include respond-to(tablet) {
+          top: auto;
+          left: -4px;
+        }
+      }
+      &:first-child::after {
+        @include respond-to(tablet) {
+          content: none;
+        }
+      }
+    }
+  }
+
+  .toggle-button {
+    display: block;
+    padding: 3px 0;
+    float: right;
+    cursor: pointer;
+    margin: 15px 0;
+    outline: none;
+
+    @include respond-to(tablet) {
+      display: none;
+    }
+
+    .divider {
+      background: $color-highlight;
+      width: 40px;
+      height: 5px;
+      display: block;
+      margin: 5px 0;
+    }
+  }
+}

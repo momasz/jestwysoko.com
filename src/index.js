@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
-import "./theme.scss";
+import "./styles/main.scss";
 
 let target = document.getElementById("app");
 
-ReactDOM.render(<App />, target);
+ReactDOM.render(<App randomizeVideos={true} />, target);

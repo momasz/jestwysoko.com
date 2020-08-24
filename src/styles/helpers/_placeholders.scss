@@ -1,0 +1,19 @@
+%container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0 $body-gap/2;
+
+  @include respond-to(tablet) {
+    width: $grid-width-web-small;
+    margin: 0 auto;
+    padding: 0 $body-gap;
+  }
+
+  @include respond-to(web) {
+    width: $grid-width-web;
+  }
+
+  @include respond-to(big) {
+    width: $grid-width-big;
+  }
+}

@@ -2,12 +2,16 @@
 
 exports[`Footer component renders as expected 1`] = `
 <Footer>
-  <p>
-    jestwysoko.com 
-    <strong>
-      ©
-    </strong>
-     2020
-  </p>
+  <div
+    className="footer"
+  >
+    <div
+      className="container"
+    >
+      <p>
+        jestwysoko.com 🤘
+      </p>
+    </div>
+  </div>
 </Footer>
 `;

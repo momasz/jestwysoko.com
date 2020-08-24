@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 import {
   BrowserRouter as Router,
   useLocation
 } from "react-router-dom";
-import Header from "./Header";
 import Footer from "./Footer";
 import Videos from "./Videos"
 
@@ -17,13 +17,16 @@ const ScrollToTop = () => {
   return null;
 };
 
-const App = () => (
+const App = ({ randomizeVideos = false }) => (
   <Router>
-    <Header/>
     <ScrollToTop/>
-    <Videos/>
+    <Videos randomizeVideos={randomizeVideos}/>
     <Footer/>
   </Router>
 );
+
+App.propTypes = {
+  randomizeVideos: PropTypes.bool
+};
 
 export default App;
