@@ -25,14 +25,43 @@ exports[`Video component renders as expected 1`] = `
     }
   >
     <Video>
-      <iframe
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen={true}
-        frameBorder="0"
-        height={315}
-        src="https://www.youtube.com/embed/undefined?controls=0"
-        width={560}
-      />
+      <div
+        className="movie-content"
+      >
+        <div
+          className="movie-container open"
+        >
+          <div
+            className="video-container"
+          >
+            <div
+              className="video-element"
+            >
+              <div
+                className="loader"
+              />
+              <div
+                className="video-wrapper"
+              >
+                <div
+                  className="video"
+                >
+                  <iframe
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen={true}
+                    frameBorder="0"
+                    height={315}
+                    loading="lazy"
+                    onLoad={[Function]}
+                    src="https://www.youtube.com/embed/undefined?controls=0"
+                    width={560}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </Video>
   </Router>
 </BrowserRouter>

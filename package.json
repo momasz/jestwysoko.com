@@ -22,6 +22,7 @@
     "eslint": "^7.7.0",
     "eslint-plugin-jest": "^23.20.0",
     "eslint-plugin-react": "^7.20.6",
+    "intersection-observer": "^0.11.0",
     "jest": "^26.4.0",
     "node-sass": "^4.14.1",
     "parcel-bundler": "^1.12.4"
@@ -29,6 +30,7 @@
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-progressive-graceful-image": "^0.6.12",
     "react-router-dom": "^5.2.0"
   },
   "engines": {

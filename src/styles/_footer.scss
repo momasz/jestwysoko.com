@@ -1,0 +1,19 @@
+.footer {
+  text-align: center;
+  margin: $grid-gutter-width 0;
+  min-height: 100px;
+}
+
+.date-wrapper,
+.timer {
+  display: block;
+}
+
+.date-wrapper {
+  .date {
+    display: block;
+    @include respond-to(tablet) {
+      display: inline-block;
+    }
+  }
+}

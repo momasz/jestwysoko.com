@@ -1,7 +1,11 @@
 import React from "react";
 
 const Footer = () => (
-  <p>jestwysoko.com <strong>&copy;</strong> 2020</p>
+  <div className={"footer"}>
+    <div className={"container"}>
+      <p>jestwysoko.com 🤘</p>
+    </div>
+  </div>
 );
 
 export default Footer;
