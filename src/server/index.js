@@ -9,6 +9,7 @@ import ReactDOMServer from "react-dom/server";
 import App from "./../components/App";
 
 const app = express();
+const router = express.Router();
 
 app.use(compression());
 app.use(express.static(path.resolve(__dirname, "../../dist")));
@@ -39,7 +40,8 @@ const universalRender = (req, res) => {
   fs.readFile(filePath, "utf8", serveHTML);
 };
 
-app.get("*", universalRender);
+app.use('/.netlify/functions/index', router);
+app.use('/', universalRender);
 
 export const handler = serverLess(app);
 
