@@ -8,7 +8,7 @@ import path from "path";
 import ReactDOMServer from "react-dom/server";
 import App from "./../components/App";
 
-const defaultTemplate = "dist/index.html";
+const defaultTemplate = "../dist/index.html";
 
 const universalRender = (templateFile) => (req, res) => {
   const serveHTML = (err, htmlData) => {
