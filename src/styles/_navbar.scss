@@ -52,7 +52,6 @@ $navbar-item-height: 52px;
 
   .logo {
     float: right;
-    width: 70px;
 
     @include respond-to(tablet) {
       width: 100px;
