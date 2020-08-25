@@ -12,7 +12,7 @@
     "build::client": "npm run clean && parcel build src/static/index.html && cp src/static/_redirects dist",
     "clean": "rm -rf dist",
     "qa": "npm run lint && npm run test",
-    "test": "jest",
+    "test": "NODE_ENV=development jest",
     "lint": "eslint --ext .jsx --ext .js src"
   },
   "author": "Tomasz Kalfas",
