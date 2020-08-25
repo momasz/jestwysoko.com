@@ -7,7 +7,7 @@
   "scripts": {
     "start": "babel-node .tools/localServer.js",
     "start::static": "parcel src/static/index.html",
-    "build": "netlify-lambda build src/server",
+    "build": "npm run build::client && netlify-lambda build src/server",
     "build::client": "npm run clean && parcel build src/static/index.html",
     "clean": "rm -rf dist",
     "test": "jest",
