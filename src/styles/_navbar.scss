@@ -5,9 +5,9 @@ $navbar-item-height: 52px;
 
 .navbar-wrapper {
   padding: $body-gap/2;
-  margin-bottom: $grid-gutter-width;
 
   @include respond-to(tablet) {
+    margin-bottom: $grid-gutter-width;
     padding: 0;
   }
 }
@@ -54,7 +54,12 @@ $navbar-item-height: 52px;
   .logo {
     float: right;
 
+    @include respond-to(mobile-only) {
+      display: none;
+    }
+
     @include respond-to(tablet) {
+      display: block;
       width: 100px;
     }
 
