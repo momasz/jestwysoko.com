@@ -8,9 +8,9 @@ import path from "path";
 import ReactDOMServer from "react-dom/server";
 import App from "./../components/App";
 
-const defaultFilePath = "../dist/index.html";
+const defaultTemplate = "dist/index.html";
 
-const universalRender = (filePath) => (req, res) => {
+const universalRender = (templateFile) => (req, res) => {
   const serveHTML = (err, htmlData) => {
     if (err) {
       console.error("Read error", err);
@@ -31,19 +31,20 @@ const universalRender = (filePath) => (req, res) => {
     res.send(htmlData);
   };
 
-  fs.readFile(filePath, "utf8", serveHTML);
+  fs.readFile(templateFile, "utf8", serveHTML);
 };
 
-const createApp = (indexFile = defaultFilePath) => {
+const createApp = (filePath = defaultTemplate, serveStatic = false) => {
   const app = express();
   const router = express.Router();
 
   app.use(compression());
-  app.use(express.static(path.resolve(__dirname, "../../dist")));
+
+  if (serveStatic) {
+    app.use(express.static(path.resolve(__dirname, "../../dist")));
+  }
 
   app.use('/.netlify/functions/index', router);
-
-  const filePath = path.resolve(__dirname, indexFile);
   app.use('/', universalRender(filePath));
 
   return app;
