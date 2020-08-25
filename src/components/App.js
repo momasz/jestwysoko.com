@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import {
-  BrowserRouter as Router,
   useLocation
 } from "react-router-dom";
 import Footer from "./Footer";

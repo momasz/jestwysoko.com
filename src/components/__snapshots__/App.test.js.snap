@@ -1,30 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component renders as expected 1`] = `
-<App>
-  <BrowserRouter>
-    <Router
-      history={
-        Object {
-          "action": "POP",
-          "block": [Function],
-          "createHref": [Function],
-          "go": [Function],
-          "goBack": [Function],
-          "goForward": [Function],
-          "length": 1,
-          "listen": [Function],
-          "location": Object {
-            "hash": "",
-            "pathname": "/",
-            "search": "",
-            "state": undefined,
-          },
-          "push": [Function],
-          "replace": [Function],
-        }
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
       }
-    >
+    }
+  >
+    <App>
       <ScrollToTop />
       <Videos
         randomizeVideos={false}
@@ -54,13 +54,8 @@ exports[`App component renders as expected 1`] = `
                 className="logo"
                 href="/"
               >
-                <img
-                  alt="jestwysoko.com"
-                  src={
-                    Object {
-                      "process": [Function],
-                    }
-                  }
+                <div
+                  className="logo-element"
                 />
               </a>
             </div>
@@ -4443,7 +4438,7 @@ exports[`App component renders as expected 1`] = `
           </div>
         </div>
       </Footer>
-    </Router>
-  </BrowserRouter>
-</App>
+    </App>
+  </Router>
+</BrowserRouter>
 `;
