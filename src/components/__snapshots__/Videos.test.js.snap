@@ -50,13 +50,8 @@ exports[`Videos component renders as expected 1`] = `
               className="logo"
               href="/"
             >
-              <img
-                alt="jestwysoko.com"
-                src={
-                  Object {
-                    "process": [Function],
-                  }
-                }
+              <div
+                className="logo-element"
               />
             </a>
           </div>
