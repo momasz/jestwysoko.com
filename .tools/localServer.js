@@ -1,3 +1,3 @@
-const app = require('./../src/server');
+import app from './../src/server';
 
-app.listen(3000, () => console.log('Local app listening on port 3000!'));
+app.listen(3000, () => console.log('Local server listening on port 3000!'));
