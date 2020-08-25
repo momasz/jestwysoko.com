@@ -18,11 +18,11 @@ const ScrollToTop = () => {
 };
 
 const App = ({ randomizeVideos = false }) => (
-  <Router>
+  <>
     <ScrollToTop/>
     <Videos randomizeVideos={randomizeVideos}/>
     <Footer/>
-  </Router>
+  </>
 );
 
 App.propTypes = {
