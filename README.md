@@ -1,8 +1,6 @@
 jestwysoko.com
 ============
 
-![jestwysoko.com](http://jestwysoko.com/static/images/logo.png)
-
 Videos portfolio website
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3560a526-d55f-410a-81fe-7994bb000032/deploy-status)](https://app.netlify.com/sites/hungry-aryabhata-c4b398/deploys)
