@@ -55,7 +55,7 @@ exports[`Video component renders as expected 1`] = `
                     height={315}
                     loading="lazy"
                     onLoad={[Function]}
-                    src="https://www.youtube.com/embed/undefined?controls=0"
+                    src="https://www.youtube.com/embed/undefined?controls=1"
                     width={560}
                   />
                 </div>

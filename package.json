@@ -7,10 +7,11 @@
   "scripts": {
     "start": "babel-node .tools/localServer.js",
     "start::static": "parcel src/static/index.html",
-    "build": "npm run build::client",
+    "build": "npm run qa && npm run build::client",
     "build::lambda": "npm run build::client && netlify-lambda build src/server",
     "build::client": "npm run clean && parcel build src/static/index.html && cp src/static/_redirects dist",
     "clean": "rm -rf dist",
+    "qa": "npm run lint && npm run test",
     "test": "jest",
     "lint": "eslint --ext .jsx --ext .js src"
   },

@@ -7,7 +7,7 @@ import {
 const Video = ({ width = 560, height = 315 }) => {
   const [loaded, setLoaded] = useState(false);
   let { videoId } = useParams();
-  const src = `https://www.youtube.com/embed/${videoId}?controls=0`;
+  const src = `https://www.youtube.com/embed/${videoId}?controls=1`;
   const allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
 
   useEffect(() => {
